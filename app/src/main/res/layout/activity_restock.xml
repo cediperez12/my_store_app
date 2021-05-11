@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.RestockActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/restock_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Restock"
+        app:titleTextColor="@color/purple_500"
+        style="@style/Widget.MaterialComponents.Toolbar.Surface" />
+
+    <RelativeLayout
+        android:id="@+id/restock_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/restock_toolbar"
+        android:visibility="invisible">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/commonCardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/commonCardView.ChildLayout"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/commonCardView.Title"
+                            android:text="Expenses"/>
+
+                        <TextView
+                            android:id="@+id/restock_date_txtv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/commonCardView.Subtitle"
+                            android:text="December 12, 1999"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:layout_gravity="center_vertical"
+                                android:textAppearance="@style/commonCardView.Subtitle"
+                                android:layout_weight="1"/>
+
+                            <TextView
+                                android:id="@+id/restock_total_txtv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/bodyStyle"
+                                android:text="$0"
+                                android:textColor="@color/purple_500"
+                                android:textAlignment="textEnd"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/restock_btn_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_gravity="end"
+                            android:onClick="onClickPay"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                            style="@style/commonCardView.Button"
+                            android:text="Pay"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/subtitleStyle"
+                    android:padding="8dp"
+                    android:text="Products"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/restock_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/commonRecyclerView"
+                    tools:listitem="@layout/restock_adapter_layout"
+                    tools:itemCount="2"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/restock_fab_add_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/purple_500"
+            app:elevation="0dp"
+            app:borderWidth="0dp"
+            app:tint="@color/white"
+            android:onClick="restockButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_create"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/restock_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/subtitleStyle"
+            android:text="No products to be restocked yet!"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            style="@style/commonButton.TextButton"
+            android:onClick="restockButton"
+            android:text="Restock Now"/>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/restock_bottomsheet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            android:padding="8dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            style="@style/commonBottomSheet">
+
+            <Button
+                android:id="@+id/restock_bottomsheet_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                style="@style/commonIconOnlyButton"
+                app:icon="@drawable/ic_close"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/header2STyle"
+                android:text="Select product"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/subtitleStyle"
+                android:text="Please select a product to restock. "/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/restock_bottomsheet_product_til_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Products"
+                style="@style/commonTextInputLayout.DropDown">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/restock_bottomsheet_count_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Restock Count"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:enabled="false"
+                    style="@style/commonTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/restock_bottomsheet_cost_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Costs"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    style="@style/commonTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/restock_bottomsheet_add_restock_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="end"
+                android:enabled="false"
+                android:text="Restock"
+                android:onClick="onClickAddToList"
+                style="@style/commonButton"/>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</RelativeLayout>

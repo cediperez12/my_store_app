@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/dashboard_view_products_menu"
+        android:title="Products"
+        android:icon="@drawable/ic_shop_item"
+        android:iconTint="@color/purple_700"
+        app:showAsAction="always"
+        />
+</menu>

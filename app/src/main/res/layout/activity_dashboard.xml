@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.DashboardActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/dashboard_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/dashboard_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                style="@style/Widget.MaterialComponents.Toolbar.Surface"
+                app:titleTextAppearance="@style/titleStyle"
+                app:title="Dashboard"
+                app:titleTextColor="@color/purple_500" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dashboard_toolbar"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/dashboard_card_today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/commonCardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/commonCardView.ChildLayout"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/commonCardView.Title"
+                            android:text="Today"/>
+
+                        <TextView
+                            android:id="@+id/dashboard_card_today_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="@style/commonCardView.Subtitle"
+                            android:text="January 14, 2000"/>
+
+                        <RelativeLayout
+                            android:id="@+id/dashboard_card_today_sales_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/subtitleStyle"
+                                android:text="Sales"/>
+
+                            <TextView
+                                android:id="@+id/dashboard_card_today_sales_prompt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textAppearance="@style/bodyStyle"
+                                android:text="P 100,000.00"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/dashboard_card_today_expenses_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/subtitleStyle"
+                                android:text="Expenses"/>
+
+                            <TextView
+                                android:id="@+id/dashboard_card_today_expenses_prompt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textAppearance="@style/bodyStyle"
+                                android:text="P 25,000.00"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/dashboard_card_separator"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/purple_500"/>
+
+                        <RelativeLayout
+                            android:id="@+id/dashboard_card_today_total_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/subtitleStyle"
+                                android:text="Revenues"/>
+
+                            <TextView
+                                android:id="@+id/dashboard_card_today_total_prompt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textAppearance="@style/bodyStyle"
+                                android:text="P 75,000.00"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/dashboard_card_last_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    style="@style/commonCardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        style="@style/commonCardView.ChildLayout">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Last Order"
+                            android:textAppearance="@style/commonCardView.Title"/>
+
+                        <TextView
+                            android:id="@+id/dashboard_card_last_order_order_number_txtv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ORDER ID: #1"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="@style/commonCardView.Subtitle"/>
+
+                        <TextView
+                            android:id="@+id/dashboard_card_last_order_date_txtv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Date Ordered: December 12, 1999"
+                            android:layout_marginTop="4dp"
+                            android:textAppearance="@style/commonCardView.Subtitle"/>
+
+                        <RelativeLayout
+                            android:id="@+id/dashboard_card_last_Order_cost_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/commonCardView.Subtitle"
+                                android:text="Costs"/>
+
+                            <TextView
+                                android:id="@+id/dashboard_card_last_order_cost_prompt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:textAppearance="@style/bodyStyle"
+                                android:text="P 15,000.00"/>
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/dashboard_card_last_order_view_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:text="View Order"
+
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                            style="@style/commonCardView.Button"
+                            />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/dashboard_product_list_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:textAppearance="@style/subtitleStyle"
+                            android:text="Inventory"
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/dashboard_card_product_list_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/commonRecyclerView"
+                            tools:itemCount="5"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:listitem="@layout/product_adapter_layout"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dashboard_product_empty_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/subtitleStyle"
+                            android:text="No products have been retrieved."/>
+
+                        <Button
+                            android:id="@+id/dashboard_product_empty_create_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            style="@style/commonButton.TextButton"
+                            android:textAllCaps="false"
+                            android:text="New Product"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/dashboard_adview"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_create"
+        android:onClick="clickFabCreate"
+        app:borderWidth="0dp"
+        app:elevation="4dp"
+        app:backgroundTint="@color/purple_500"
+        app:tint="@color/white"
+        android:tooltipText="Create new"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dashboard_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/BANNER_ID"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

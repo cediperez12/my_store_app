@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyStore</string>
+    <string name="AD_APP_ID">ca-app-pub-5898163108994398~3254482982</string>
+    <string name="BANNER_ID">ca-app-pub-5898163108994398/3952772399</string>
+    <string name="INTERSTITIAL_ADD_ID">ca-app-pub-5898163108994398/9885671642</string>
+</resources>

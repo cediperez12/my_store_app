@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/product_adapter_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/product_adapter_more_button"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_adapter_txtv_prod_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/commonListTitleStyle"
+            android:text="Sample Product Name"/>
+
+        <TextView
+            android:id="@+id/product_adapter_txtv_stocks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/commonListSubtitleStyle"
+            android:text="100 pieces left"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/product_adapter_more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        style="@style/commonIconOnlyButton"
+        app:icon="@drawable/ic_more"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray"
+        android:layout_below="@id/product_adapter_linear_layout"/>
+
+</RelativeLayout>

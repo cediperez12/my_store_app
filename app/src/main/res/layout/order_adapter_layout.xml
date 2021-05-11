@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+    
+    <LinearLayout
+        android:id="@+id/order_adapter_layout_prod_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/order_adapter_txtv_costs"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_adapter_txtv_prodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/bodyStyle"
+            android:text="Sample product"/>
+
+        <TextView
+            android:id="@+id/order_adapter_txtv_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/subtitleStyle"
+            android:text="2 pieces"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_adapter_txtv_costs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/bodyStyle"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="$100"/>
+
+</RelativeLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.NewOrderActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/new_order_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        style="@style/Widget.MaterialComponents.Toolbar.Surface"
+        app:titleTextColor="@color/purple_500"
+        app:title="New Order"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/new_order_toolbar"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/new_order_empty_order_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No products ordered yet."
+                android:textAlignment="center"
+                android:textAppearance="@style/subtitleStyle"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/new_order_btn_add_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:onClick="clickAddOrder"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:text="Add Order"
+                style="@style/commonButton.TextButton" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/new_order_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/subtitleStyle"
+                    android:text="Orders"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/new_order_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/commonRecyclerView"
+                    tools:listitem="@layout/new_order_adapter_layout"
+                    tools:itemCount="4"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="16dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/new_order_fab_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:onClick="onClickPayment"
+            app:backgroundTint="@color/white"
+            app:elevation="1dp"
+            app:borderWidth="1dp"
+            app:tint="@color/purple_500"
+            android:src="@drawable/ic_payment"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/new_order_fab_add_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickAddOrder"
+            app:backgroundTint="@color/purple_500"
+            app:elevation="0dp"
+            app:borderWidth="0dp"
+            app:tint="@color/white"
+            android:src="@drawable/ic_create"/>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/new_order_bottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            style="@style/commonBottomSheet">
+
+            <Button
+                android:id="@+id/new_order_sheet_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickClose"
+                style="@style/commonIconOnlyButton"
+                android:layout_gravity="end"
+                app:icon="@drawable/ic_close"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/header2STyle"
+                android:text="Select Product"
+                android:textColor="@color/purple_500"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/subtitleStyle"
+                android:text="Choose the product to add to the order."/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/new_order_sheet_select_product_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Product"
+                style="@style/commonTextInputLayout.DropDown">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    style="@style/commonCardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/new_order_sheet_stocks_txtv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/commonCardView.Title"
+                            android:text="0"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/commonCardView.Subtitle"
+                            android:textAlignment="center"
+                            android:text="Stocks"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    style="@style/commonCardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/new_order_sheet_cost_txtv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/commonCardView.Title"
+                            android:text="$0"
+                            android:textColor="@color/purple_500"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/commonCardView.Subtitle"
+                            android:textAlignment="center"
+                            android:text="Costs per item"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/new_order_sheet_count_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Order Count"
+                android:enabled="false"
+                style="@style/commonTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="3"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/purple_500"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/subtitleStyle"
+                    android:text="Costs"/>
+
+                <TextView
+                    android:id="@+id/new_order_total_cost_txtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="8dp"
+                    android:textAppearance="@style/bodyStyle"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"
+                    android:text="$0"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/new_order_sheet_add_order_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="Add Order"
+                android:onClick="onClickAddOrder"
+                style="@style/commonButton"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

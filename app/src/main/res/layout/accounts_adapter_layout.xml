@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        style="@style/commonCardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/commonCardView.ChildLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/account_adapter_acc_txtv_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/bodyStyle"
+                    android:text="Account ID #100001"
+                    android:textColor="@color/purple_500"/>
+
+                <TextView
+                    android:id="@+id/account_adapter_acc_txtv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/subtitleStyle"
+                    android:text="January 14, 2000"/>
+
+                <TextView
+                    android:id="@+id/account_adapter_acc_txtv_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="$1,050.25"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:textAppearance="@style/bodyStyle"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/account_adapter_chip_acc_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restock"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/account_adapter_acc_btn_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:icon="@drawable/ic_show"
+                style="@style/commonIconOnlyButton"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

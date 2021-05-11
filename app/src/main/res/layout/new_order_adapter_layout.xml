@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <Button
+        android:id="@+id/new_order_adapter_disabled_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:text=""
+        style="@style/commonIconOnlyButton"
+        app:icon="@drawable/ic_shop_item"
+        app:iconSize="36dp"
+        android:enabled="false"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/new_order_adapter_disabled_btn"
+        android:layout_toStartOf="@id/new_order_adapter_btn_close"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/new_order_adapter_txtv_prod_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/header2STyle"
+            android:text="Product 1"
+            android:textColor="@color/purple_500"/>
+
+        <TextView
+            android:id="@+id/new_order_adapter_txtv_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/subtitleStyle"
+            android:text="15 pieces"/>
+
+        <TextView
+            android:id="@+id/new_order_adapter_txtv_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/subtitleStyle"
+            android:text="$240.50"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/new_order_adapter_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text=""
+        app:icon="@drawable/ic_close"
+        style="@style/commonIconOnlyButton"/>
+
+</RelativeLayout>
