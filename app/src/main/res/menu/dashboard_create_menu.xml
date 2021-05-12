@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
     <item
         android:id="@+id/dashboard_create_menu_product"
         android:icon="@drawable/ic_shop_item"
         android:iconTint="@color/gray"
-        android:title="Product"/>
+        android:title="Add Product" />
 
     <item
         android:id="@+id/dashboard_create_menu_restock"
         android:icon="@drawable/ic_shop_restock"
         android:iconTint="@color/gray"
-        android:title="Restock"/>
+        android:title="Restock" />
 
     <item
         android:id="@+id/dashboard_create_menu_Order"
         android:icon="@drawable/ic_payment"
-        android:iconTint="@color/gray"
-        android:title="Order"/>
+        android:title="Order">
+
+    </item>
 </menu>

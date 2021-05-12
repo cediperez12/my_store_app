@@ -9,4 +9,8 @@
     <color name="black">#263238</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#979797</color>
+    <color name="ashWhite">#EAECF0</color>
+    <color name="purpBlue">#759BF9</color>
+    <color name="ashGray">#7B8794</color>
+    <color name="matteBlack">#323F4B</color>
 </resources>

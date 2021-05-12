@@ -924,6 +924,8 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color ashGray
+color ashWhite
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1024,6 +1026,7 @@ color material_slider_halo_color
 color material_slider_inactive_tick_marks_color
 color material_slider_inactive_track_color
 color material_slider_thumb_color
+color matteBlack
 color mtrl_bottom_nav_colored_item_tint
 color mtrl_bottom_nav_colored_ripple_color
 color mtrl_bottom_nav_item_tint
@@ -1085,6 +1088,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purpBlue
 color purple_200
 color purple_500
 color purple_700
@@ -1106,6 +1110,7 @@ color teal_200
 color teal_700
 color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
+color tf_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
@@ -1564,12 +1569,14 @@ drawable ic_close
 drawable ic_create
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_money
 drawable ic_more
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_payment
+drawable ic_prod
 drawable ic_shop_item
 drawable ic_shop_restock
 drawable ic_show
@@ -1603,10 +1610,17 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable shadow_
+drawable shadow_image
+drawable shape_round
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font inter_regular
+font mulish_bold
+font mulish_extra_bold
+font mulish_regular
+font mulish_semibold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1748,7 +1762,6 @@ id dashboard_card_last_order_date_txtv
 id dashboard_card_last_order_order_number_txtv
 id dashboard_card_last_order_view_btn
 id dashboard_card_product_list_recyclerview
-id dashboard_card_separator
 id dashboard_card_today
 id dashboard_card_today_date
 id dashboard_card_today_expenses_layout
@@ -1946,6 +1959,7 @@ id position
 id postLayout
 id product_adapter_linear_layout
 id product_adapter_more_button
+id product_adapter_txtv_price
 id product_adapter_txtv_prod_name
 id product_adapter_txtv_stocks
 id progress_circular
@@ -2580,6 +2594,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style Divider
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -3070,6 +3085,7 @@ style commonTextInputLayout_DropDown
 style header1Style
 style header2STyle
 style subtitleStyle
+style subtitleStyleV2
 style titleStyle
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity

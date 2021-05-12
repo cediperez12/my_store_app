@@ -1,48 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="8dp">
+    android:background="@color/ashWhite" android:paddingTop="8dp">
 
     <LinearLayout
         android:id="@+id/product_adapter_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toStartOf="@+id/product_adapter_more_button"
+        android:background="@drawable/shadow_image"
         android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/product_adapter_txtv_prod_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/commonListTitleStyle"
-            android:text="Sample Product Name"/>
 
         <TextView
             android:id="@+id/product_adapter_txtv_stocks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="STOCK: 20"
             android:textAppearance="@style/commonListSubtitleStyle"
-            android:text="100 pieces left"/>
+            android:textColor="@color/purpBlue" />
+
+        <TextView
+            android:id="@+id/product_adapter_txtv_prod_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_extra_bold"
+            android:text="Sample Product Name"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="true"
+            android:textAppearance="@style/commonListTitleStyle"
+            android:textColor="@color/matteBlack"
+            android:textStyle="bold" />
+
+        <View
+            style="@style/Divider"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/product_adapter_txtv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="100 pieces left"
+                android:textAppearance="@style/commonListSubtitleStyle"
+                android:textColor="@color/purpBlue" />
+
+            <Button
+                android:id="@+id/product_adapter_more_button"
+                style="@style/commonIconOnlyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_more"
+                app:iconTint="@color/purpBlue" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/product_adapter_more_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        style="@style/commonIconOnlyButton"
-        app:icon="@drawable/ic_more"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/gray"
-        android:layout_below="@id/product_adapter_linear_layout"/>
 
 </RelativeLayout>

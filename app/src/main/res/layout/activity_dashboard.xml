@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ashWhite"
     android:orientation="vertical"
     tools:context=".Activity.DashboardActivity">
 
@@ -19,46 +20,55 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/dashboard_toolbar"
+                style="@style/Widget.MaterialComponents.Toolbar.Surface"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                style="@style/Widget.MaterialComponents.Toolbar.Surface"
-                app:titleTextAppearance="@style/titleStyle"
                 app:title="Dashboard"
-                app:titleTextColor="@color/purple_500" />
+                android:background="@color/ashWhite"
+                app:titleTextColor="@color/matteBlack"
+                app:titleTextAppearance="@style/titleStyle"
+                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/dashboard_toolbar"
-                android:orientation="vertical"
-                android:layout_margin="8dp">
+                android:layout_margin="8dp"
+                android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/dashboard_card_today"
+
+                    style="@style/commonCardView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/commonCardView">
+                    app:cardUseCompatPadding="true"
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         style="@style/commonCardView.ChildLayout"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/commonCardView.Title"
-                            android:text="Today"/>
+                            android:text="Today"
+                            style="@style/titleStyle"
+                            android:textSize="20sp"
+                            android:textColor="@color/matteBlack"
+                            android:textAppearance="@style/commonCardView.Title" />
 
                         <TextView
                             android:id="@+id/dashboard_card_today_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:textAppearance="@style/commonCardView.Subtitle"
-                            android:text="January 14, 2000"/>
+                            android:text="January 14, 2000"
+                            android:textAppearance="@style/subtitleStyle"
+                            />
 
                         <RelativeLayout
                             android:id="@+id/dashboard_card_today_sales_layout"
@@ -69,16 +79,17 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/subtitleStyle"
-                                android:text="Sales"/>
+                                android:fontFamily="@font/mulish_semibold"
+                                android:text="Sales"
+                                android:textAppearance="@style/subtitleStyleV2" />
 
                             <TextView
                                 android:id="@+id/dashboard_card_today_sales_prompt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:textAppearance="@style/bodyStyle"
-                                android:text="P 100,000.00"/>
+                                android:text="P 100,000.00"
+                                android:textAppearance="@style/bodyStyle" />
 
                         </RelativeLayout>
 
@@ -91,24 +102,26 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/subtitleStyle"
-                                android:text="Expenses"/>
+                                android:text="Expenses"
+                                android:textAppearance="@style/subtitleStyleV2" />
 
                             <TextView
                                 android:id="@+id/dashboard_card_today_expenses_prompt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:textAppearance="@style/bodyStyle"
-                                android:text="P 25,000.00"/>
+                                android:text="P 25,000.00"
+                                android:textAppearance="@style/bodyStyle" />
 
                         </RelativeLayout>
 
                         <View
-                            android:id="@+id/dashboard_card_separator"
+                            style="@style/Divider"
                             android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/purple_500"/>
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="12dp" />
 
                         <RelativeLayout
                             android:id="@+id/dashboard_card_today_total_layout"
@@ -119,16 +132,16 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/subtitleStyle"
-                                android:text="Revenues"/>
+                                android:text="Revenues"
+                                android:textAppearance="@style/subtitleStyleV2" />
 
                             <TextView
                                 android:id="@+id/dashboard_card_today_total_prompt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:textAppearance="@style/bodyStyle"
-                                android:text="P 75,000.00"/>
+                                android:text="P 75,000.00"
+                                android:textAppearance="@style/bodyStyle" />
 
                         </RelativeLayout>
 
@@ -138,38 +151,38 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/dashboard_card_last_order"
+                    style="@style/commonCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    style="@style/commonCardView">
+                    app:cardUseCompatPadding="true">
 
                     <LinearLayout
+                        style="@style/commonCardView.ChildLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        style="@style/commonCardView.ChildLayout">
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Last Order"
-                            android:textAppearance="@style/commonCardView.Title"/>
+                            android:textAppearance="@style/commonCardView.Title" />
 
                         <TextView
                             android:id="@+id/dashboard_card_last_order_order_number_txtv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="ORDER ID: #1"
                             android:layout_marginTop="4dp"
-                            android:textAppearance="@style/commonCardView.Subtitle"/>
+                            android:text="ORDER ID: #1"
+                            android:textAppearance="@style/commonCardView.Subtitle" />
 
                         <TextView
                             android:id="@+id/dashboard_card_last_order_date_txtv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Date Ordered: December 12, 1999"
                             android:layout_marginTop="4dp"
-                            android:textAppearance="@style/commonCardView.Subtitle"/>
+                            android:text="Date Ordered: December 12, 1999"
+                            android:textAppearance="@style/commonCardView.Subtitle" />
 
                         <RelativeLayout
                             android:id="@+id/dashboard_card_last_Order_cost_layout"
@@ -180,29 +193,28 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/commonCardView.Subtitle"
-                                android:text="Costs"/>
+                                android:text="Costs"
+                                android:textAppearance="@style/commonCardView.Subtitle" />
 
                             <TextView
                                 android:id="@+id/dashboard_card_last_order_cost_prompt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
-                                android:textAppearance="@style/bodyStyle"
-                                android:text="P 15,000.00"/>
+                                android:text="P 15,000.00"
+                                android:textAppearance="@style/bodyStyle" />
 
                         </RelativeLayout>
 
                         <Button
                             android:id="@+id/dashboard_card_last_order_view_btn"
+                            style="@style/commonCardView.Button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:text="View Order"
 
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                            style="@style/commonCardView.Button"
-                            />
+                            android:text="View Order"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
 
                     </LinearLayout>
 
@@ -211,31 +223,37 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="120dp"
+                    android:background="@color/ashWhite">
 
                     <LinearLayout
                         android:id="@+id/dashboard_product_list_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="invisible"
-                        android:orientation="vertical">
+                        android:background="@color/ashWhite"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_regular"
                             android:padding="8dp"
-                            android:textAppearance="@style/subtitleStyle"
                             android:text="Inventory"
-                            />
+                            android:textAppearance="@style/titleStyle"
+                            android:textColor="@color/matteBlack"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/dashboard_card_product_list_recyclerview"
+                            style="@style/commonRecyclerView"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            style="@style/commonRecyclerView"
-                            tools:itemCount="5"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            tools:listitem="@layout/product_adapter_layout"/>
+                            tools:itemCount="5"
+                            tools:listitem="@layout/product_adapter_layout" />
 
                     </LinearLayout>
 
@@ -243,27 +261,29 @@
                         android:id="@+id/dashboard_product_empty_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:orientation="vertical">
+                        android:background="#00EAECF0"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="No products have been retrieved."
                             android:textAlignment="center"
-                            android:textColor="@color/black"
                             android:textAppearance="@style/subtitleStyle"
-                            android:text="No products have been retrieved."/>
+                            android:textColor="@color/ashGray" />
 
                         <Button
                             android:id="@+id/dashboard_product_empty_create_btn"
+                            style="@style/commonButton.TextButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="4dp"
-                            style="@style/commonButton.TextButton"
-                            android:textAllCaps="false"
                             android:text="New Product"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
 
                     </LinearLayout>
 
@@ -278,24 +298,23 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_above="@+id/dashboard_adview"
+        android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_create"
         android:onClick="clickFabCreate"
+        android:src="@drawable/ic_create"
+        android:tooltipText="Create new"
+        app:backgroundTint="@color/purple_500"
         app:borderWidth="0dp"
         app:elevation="4dp"
-        app:backgroundTint="@color/purple_500"
-        app:tint="@color/white"
-        android:tooltipText="Create new"/>
+        app:tint="@color/white" />
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/dashboard_adview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/BANNER_ID"
-        android:layout_alignParentBottom="true"/>
+        ads:adUnitId="@string/BANNER_ID" />
 
 </RelativeLayout>

@@ -10,8 +10,8 @@
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 12,
-      "versionName": "release-ver-1.0.3.02.21",
+      "versionCode": 16,
+      "versionName": "release-ver-1.2.3.02.21",
       "outputFile": "AndroidManifest.xml"
     }
   ]

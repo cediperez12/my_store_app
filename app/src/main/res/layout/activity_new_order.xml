@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         style="@style/Widget.MaterialComponents.Toolbar.Surface"
-        app:titleTextColor="@color/purple_500"
+        app:titleTextColor="@color/matteBlack"
+        app:titleTextAppearance="@style/titleStyle"
         app:title="New Order"/>
 
     <RelativeLayout

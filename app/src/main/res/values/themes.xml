@@ -17,18 +17,31 @@
         <!-- Customize your theme here. -->
 
         <item name="fontFamily">@font/inter_regular</item>
+
     </style>
 
     <style name="titleStyle" parent="TextAppearance.AppCompat.Title">
-        <item name="titleTextColor">@color/purple_500</item>
+        <item name="fontFamily">@font/mulish_bold</item>
+
+        <item name="android:textSize">28sp</item>
     </style>
 
     <style name="bodyStyle" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/purpBlue</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="subtitleStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/ashGray</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="subtitleStyleV2" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/matteBlack</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="fontFamily">@font/mulish_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="header1Style" parent="TextAppearance.MaterialComponents.Headline4">
@@ -39,10 +52,22 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="commonTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeWidth">1dp</item>
-        <item name="hintTextColor">@color/black</item>
+    <style name="commonTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxStrokeColor">#00FFFFFF</item>
+        <item name="android:textColor">@color/matteBlack</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="fontFamily">@font/mulish_bold</item>
+        <item name="hintTextColor">@color/tf_selected</item>
+        <item name="startIconTint">@color/tf_selected</item>
+        <item name="backgroundColor">@color/white</item>
     </style>
+
+
 
     <style name="commonTextInputLayout.DropDown" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <item name="boxStrokeWidth">1dp</item>
@@ -50,9 +75,9 @@
     </style>
 
     <style name="commonCardView" parent="Widget.MaterialComponents.CardView">
-        <item name="cardElevation">0dp</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="strokeColor">@color/stroke_color</item>
+        <item name="cardElevation">8dp</item>
+        <item name="cardCornerRadius">10dp</item>
+
     </style>
 
     <style name="commonCardView.ChildLayout">
@@ -118,10 +143,14 @@
 
     <style name="commonListTitleStyle" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/mulish_bold</item>
+
     </style>
 
     <style name="commonListSubtitleStyle" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textColor">@color/gray</item>
+        <item name="fontFamily">@font/mulish_bold</item>
+        <item name="android:textColor">@color/matteBlack</item>
+
     </style>
 
     <style name="commonIconOnlyButton" parent="Widget.MaterialComponents.Button.TextButton">
@@ -143,6 +172,12 @@
 
     <style name="commonBottomSheet.Variant1" parent="commonBottomSheet">
         <item name="behavior_peekHeight">16dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/ashGray</item>
     </style>
 
 </resources>

@@ -46,7 +46,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ContentValues cvProduct = listOfProducts.get(position);
         holder.txtvProductName.setText(cvProduct.getAsString(Product.PRODUCT_NAME));
-        holder.txtvStocksLeft.setText(NumberFormat.getCurrencyInstance().format(cvProduct.getAsDouble(Product.PRODUCT_COST)) + " • " +cvProduct.getAsInteger(Product.PRODUCT_STOCKS) + " pieces left.");
+        holder.txtvStocksLeft.setText("STOCK:" +cvProduct.getAsInteger(Product.PRODUCT_STOCKS));
+        holder.txtvPrice.setText(NumberFormat.getCurrencyInstance().format(cvProduct.getAsDouble(Product.PRODUCT_COST)));
         holder.btnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,12 +139,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
         public TextView txtvProductName;
         public TextView txtvStocksLeft;
+        public TextView txtvPrice;
         public Button btnMore;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtvProductName  = itemView.findViewById(R.id.product_adapter_txtv_prod_name);
             txtvStocksLeft = itemView.findViewById(R.id.product_adapter_txtv_stocks);
+            txtvPrice = itemView.findViewById(R.id.product_adapter_txtv_price);
             btnMore = itemView.findViewById(R.id.product_adapter_more_button);
         }
     }
