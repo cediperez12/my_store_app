@@ -1567,6 +1567,7 @@ drawable ic_account
 drawable ic_arrow_forward
 drawable ic_close
 drawable ic_create
+drawable ic_exp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_money
@@ -1575,6 +1576,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_order_d
 drawable ic_payment
 drawable ic_prod
 drawable ic_shop_item
@@ -1865,6 +1867,7 @@ id jumpToStart
 id labeled
 id largeLabel
 id layout
+id layout_ad_res
 id left
 id line1
 id line3
@@ -3073,6 +3076,7 @@ style commonButton_Variant1
 style commonCardView
 style commonCardView_Body
 style commonCardView_Button
+style commonCardView_ButtonV2
 style commonCardView_ChildLayout
 style commonCardView_Subtitle
 style commonCardView_Title

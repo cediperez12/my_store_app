@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/ashWhite"
     tools:context=".Activity.NewOrderActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -14,6 +15,7 @@
         android:layout_alignParentTop="true"
         style="@style/Widget.MaterialComponents.Toolbar.Surface"
         app:titleTextColor="@color/matteBlack"
+        android:background="@color/ashWhite"
         app:titleTextAppearance="@style/titleStyle"
         app:title="New Order"/>
 
@@ -67,16 +69,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:textAppearance="@style/subtitleStyle"
-                    android:text="Orders"/>
+                    android:text="Orders"
+                    android:textAppearance="@style/titleStyle"
+                    android:textColor="@color/matteBlack"
+                    android:textSize="16sp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/new_order_recyclerview"
+                    style="@style/commonRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/commonRecyclerView"
-                    tools:listitem="@layout/new_order_adapter_layout"
-                    tools:itemCount="4"/>
+                    tools:itemCount="4"
+                    tools:listitem="@layout/new_order_adapter_layout" />
 
             </LinearLayout>
 
@@ -119,13 +123,14 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
+
         android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/new_order_bottomsheet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
+            android:background="@drawable/shape_round"
             android:elevation="4dp"
             android:padding="8dp"
             android:orientation="vertical"
@@ -134,23 +139,26 @@
 
             <Button
                 android:id="@+id/new_order_sheet_close_btn"
+                style="@style/commonIconOnlyButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="clickClose"
-                style="@style/commonIconOnlyButton"
                 android:layout_gravity="end"
-                app:icon="@drawable/ic_close"/>
+                android:onClick="clickClose"
+                app:icon="@drawable/ic_close"
+                app:iconTint="@color/ashWhite" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/header2STyle"
+                android:textAppearance="@style/titleStyle"
                 android:text="Select Product"
-                android:textColor="@color/purple_500"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/matteBlack"
                 android:textAppearance="@style/subtitleStyle"
                 android:text="Choose the product to add to the order."/>
 
@@ -159,6 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                app:startIconDrawable="@drawable/ic_prod"
                 android:hint="Product"
                 style="@style/commonTextInputLayout.DropDown">
 
@@ -180,7 +189,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    style="@style/commonCardView">
+                    app:cardBackgroundColor="@color/white"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -195,7 +205,7 @@
                             android:layout_gravity="center"
                             android:textAppearance="@style/commonCardView.Title"
                             android:text="0"
-                            android:textColor="@color/purple_500"
+                            android:textColor="@color/purpBlue"
                             android:textStyle="bold"/>
 
                         <TextView
@@ -205,6 +215,9 @@
                             android:layout_gravity="center"
                             android:textAppearance="@style/commonCardView.Subtitle"
                             android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
                             android:text="Stocks"/>
 
                     </LinearLayout>
@@ -216,7 +229,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
-                    style="@style/commonCardView">
+                   >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -231,7 +244,7 @@
                             android:layout_gravity="center"
                             android:textAppearance="@style/commonCardView.Title"
                             android:text="$0"
-                            android:textColor="@color/purple_500"
+                            android:textColor="@color/purpBlue"
                             android:textStyle="bold"/>
 
                         <TextView
@@ -241,6 +254,9 @@
                             android:layout_gravity="center"
                             android:textAppearance="@style/commonCardView.Subtitle"
                             android:textAlignment="center"
+                            android:textColor="@color/matteBlack"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
                             android:text="Costs per item"/>
 
                     </LinearLayout>
@@ -254,7 +270,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Order Count"
+                android:paddingTop="10dp"
                 android:enabled="false"
+                app:startIconDrawable="@drawable/ic_order_d"
                 style="@style/commonTextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -280,7 +298,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:textAppearance="@style/subtitleStyle"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/subtitleStyleV2"
                     android:text="Costs"/>
 
                 <TextView
@@ -290,7 +309,7 @@
                     android:layout_alignParentEnd="true"
                     android:padding="8dp"
                     android:textAppearance="@style/bodyStyle"
-                    android:textColor="@color/purple_500"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:text="$0"/>
 
@@ -303,6 +322,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="8dp"
                 android:text="Add Order"
+                android:textColor="@color/white"
                 android:onClick="onClickAddOrder"
                 style="@style/commonButton"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>

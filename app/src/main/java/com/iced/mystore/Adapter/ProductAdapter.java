@@ -3,6 +3,7 @@ package com.iced.mystore.Adapter;
 import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -48,6 +49,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.txtvProductName.setText(cvProduct.getAsString(Product.PRODUCT_NAME));
         holder.txtvStocksLeft.setText("STOCK:" +cvProduct.getAsInteger(Product.PRODUCT_STOCKS));
         holder.txtvPrice.setText(NumberFormat.getCurrencyInstance().format(cvProduct.getAsDouble(Product.PRODUCT_COST)));
+       if(cvProduct.getAsInteger(Product.PRODUCT_STOCKS) == 0){
+            holder.txtvStocksLeft.setTextColor(Color.parseColor("#D45050"));
+       }
         holder.btnMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

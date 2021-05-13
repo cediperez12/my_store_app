@@ -2,15 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/purpBlue"
     android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/header2STyle"
+        android:textAppearance="@style/titleStyle"
         android:text="Payment"
-        android:textColor="@color/purple_500"/>
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/dialog_payment_date_txtv"
@@ -27,6 +30,7 @@
         android:layout_marginTop="18dp"
         style="@style/commonTextInputLayout"
         android:hint="Payment Received"
+        app:startIconDrawable="@drawable/ic_money"
         android:textAlignment="textEnd">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -47,7 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
             android:textAppearance="@style/subtitleStyle"
+            android:textStyle="bold"
             android:text="Total"/>
 
         <TextView
@@ -58,7 +64,7 @@
             android:textAppearance="@style/header2STyle"
             android:textAlignment="textEnd"
             android:text="$0"
-            android:textColor="@color/purple_500"/>
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
@@ -68,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
-        android:background="@color/purple_500"/>
+        android:background="@color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -82,6 +88,8 @@
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:textAppearance="@style/subtitleStyle"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="Change"/>
 
         <TextView
@@ -92,7 +100,7 @@
             android:textAppearance="@style/header2STyle"
             android:textAlignment="textEnd"
             android:text="$0"
-            android:textColor="@color/purple_500"/>
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 
@@ -109,7 +117,10 @@
             android:layout_height="wrap_content"
             android:text="Pay"
             android:enabled="false"
-            style="@style/commonButton.SideIconButton"/>
+            android:backgroundTint="@color/white"
+            android:textColor="@color/purpBlue"
+
+            style="@style/commonCardView.ButtonV2"/>
 
         <Button
             android:id="@+id/dialog_payment_cancel_btn"
@@ -117,6 +128,7 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_marginStart="8dp"
+            android:textColor="@color/white"
             style="@style/commonButton.TextButton"/>
 
     </LinearLayout>

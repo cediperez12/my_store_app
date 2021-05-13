@@ -8,6 +8,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
         android:layout_marginTop="8dp"
         style="@style/commonCardView">
 
@@ -30,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/bodyStyle"
                     android:text="Account ID #100001"
-                    android:textColor="@color/purple_500"/>
+                    android:textColor="@color/matteBlack"/>
 
                 <TextView
                     android:id="@+id/account_adapter_acc_txtv_date"
@@ -54,16 +55,26 @@
                     android:id="@+id/account_adapter_chip_acc_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:chipCornerRadius="5dp"
+                    app:chipBackgroundColor="@color/purpBlue"
+                    style="@style/commonCardView.ButtonV2"
                     android:text="Restock"/>
 
             </LinearLayout>
-
+            <View
+                style="@style/Divider"
+                android:layout_width="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:layout_marginTop="12dp" />
             <Button
                 android:id="@+id/account_adapter_acc_btn_show"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                app:icon="@drawable/ic_show"
+                android:text="VIEW"
                 style="@style/commonIconOnlyButton"
                 android:layout_gravity="center_vertical"/>
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/ashWhite"
     tools:context=".Activity.RestockActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -12,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="Restock"
-        app:titleTextColor="@color/purple_500"
+        app:titleTextColor="@color/matteBlack"
+        android:backgroundTint="@color/ashWhite"
         style="@style/Widget.MaterialComponents.Toolbar.Surface" />
 
     <RelativeLayout
@@ -29,32 +31,34 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <com.google.android.material.card.MaterialCardView
+                    style="@style/commonCardView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/commonCardView">
+                    app:cardUseCompatPadding="true">
 
                     <LinearLayout
+                        style="@style/commonCardView.ChildLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        style="@style/commonCardView.ChildLayout"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/commonCardView.Title"
-                            android:text="Expenses"/>
+                            android:text="Expenses"
+                            android:textAppearance="@style/commonCardView.Title" />
 
                         <TextView
                             android:id="@+id/restock_date_txtv"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="December 12, 1999"
                             android:textAppearance="@style/commonCardView.Subtitle"
-                            android:text="December 12, 1999"/>
+                            android:textColor="@color/ashGray" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -65,33 +69,34 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Total"
                                 android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:text="Total"
                                 android:textAppearance="@style/commonCardView.Subtitle"
-                                android:layout_weight="1"/>
+                                android:textColor="@color/matteBlack" />
 
                             <TextView
                                 android:id="@+id/restock_total_txtv"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textAppearance="@style/bodyStyle"
+                                android:layout_weight="1"
                                 android:text="$0"
-                                android:textColor="@color/purple_500"
                                 android:textAlignment="textEnd"
-                                android:layout_weight="1"/>
+                                android:textAppearance="@style/bodyStyle"
+                                android:textColor="@color/purple_500" />
 
                         </LinearLayout>
 
                         <Button
                             android:id="@+id/restock_btn_pay"
+                            style="@style/commonCardView.Button"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
                             android:layout_gravity="end"
+                            android:layout_marginTop="16dp"
                             android:onClick="onClickPay"
-                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                            style="@style/commonCardView.Button"
-                            android:text="Pay"/>
+                            android:text="Pay"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
 
                     </LinearLayout>
 
@@ -100,17 +105,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/subtitleStyle"
                     android:padding="8dp"
-                    android:text="Products"/>
+                    android:text="Products"
+                    android:textAppearance="@style/subtitleStyle" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/restock_recyclerview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     style="@style/commonRecyclerView"
-                    tools:listitem="@layout/restock_adapter_layout"
-                    tools:itemCount="2"/>
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/restock_adapter_layout" />
 
             </LinearLayout>
 
@@ -120,16 +126,16 @@
             android:id="@+id/restock_fab_add_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/purple_500"
-            app:elevation="0dp"
-            app:borderWidth="0dp"
-            app:tint="@color/white"
-            android:onClick="restockButton"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginBottom="16dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_create"/>
+            android:layout_marginBottom="16dp"
+            android:onClick="restockButton"
+            android:src="@drawable/ic_create"
+            app:backgroundTint="@color/purple_500"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:tint="@color/white" />
 
     </RelativeLayout>
 
@@ -167,7 +173,7 @@
             android:id="@+id/restock_bottomsheet_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
+            android:background="@drawable/shape_round"
             android:orientation="vertical"
             android:elevation="4dp"
             android:padding="8dp"
@@ -176,23 +182,26 @@
 
             <Button
                 android:id="@+id/restock_bottomsheet_close_btn"
+                style="@style/commonIconOnlyButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                style="@style/commonIconOnlyButton"
-                app:icon="@drawable/ic_close"/>
+                app:icon="@drawable/ic_close"
+                app:iconTint="@color/white" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/header2STyle"
                 android:text="Select product"
-                android:textColor="@color/purple_500"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/matteBlack"
                 android:textAppearance="@style/subtitleStyle"
                 android:text="Please select a product to restock. "/>
 
@@ -201,6 +210,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                app:startIconDrawable="@drawable/ic_prod"
                 android:hint="Products"
                 style="@style/commonTextInputLayout.DropDown">
 
@@ -224,6 +234,7 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="8dp"
                     android:enabled="false"
+                    app:startIconDrawable="@drawable/ic_prod"
                     style="@style/commonTextInputLayout">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -239,6 +250,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Costs"
                     android:layout_weight="1"
+                    app:startIconDrawable="@drawable/ic_money"
                     android:enabled="false"
                     style="@style/commonTextInputLayout">
 
@@ -259,6 +271,7 @@
                 android:layout_gravity="end"
                 android:enabled="false"
                 android:text="Restock"
+                android:textColor="@color/white"
                 android:onClick="onClickAddToList"
                 style="@style/commonButton"/>
 

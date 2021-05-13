@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/ashWhite"
     tools:context=".Activity.AccountingActivity">
 
     <LinearLayout
@@ -16,8 +17,9 @@
             android:id="@+id/accounting_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/ashWhite"
             app:title="Accounting"
-            app:titleTextColor="@color/purple_500"/>
+            app:titleTextColor="@color/matteBlack"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,6 +30,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
                 style="@style/commonCardView">
 
                 <LinearLayout
@@ -40,13 +43,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Accounts"
+                        style="@style/titleStyle"
                         android:textAppearance="@style/commonCardView.Title"/>
 
                     <TextView
                         android:id="@+id/accounting_date_txtv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/ashGray"
                         android:textAppearance="@style/commonCardView.Subtitle"
+                        style="@style/subtitleStyleV2"
                         android:text="January"/>
 
                     <TextView
@@ -66,7 +72,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textAppearance="@style/subtitleStyle"
+                            android:textAppearance="@style/subtitleStyleV2"
                             android:text="Sales"/>
 
                         <TextView
@@ -89,7 +95,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textAppearance="@style/subtitleStyle"
+                            android:textAppearance="@style/subtitleStyleV2"
                             android:text="Expenses"/>
 
                         <TextView
@@ -119,7 +125,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textAppearance="@style/subtitleStyle"
+                            android:textAppearance="@style/subtitleStyleV2"
                             android:text="Revenue"/>
 
                         <TextView
@@ -137,7 +143,7 @@
                         android:id="@+id/accounting_btn_change_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        style="@style/commonCardView.Button"
+                        style="@style/commonCardView.ButtonV2"
                         android:onClick="ChangeDate"
                         android:layout_gravity="end"
                         android:layout_marginTop="16dp"

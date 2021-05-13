@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/purpBlue"
     android:padding="16dp">
 
     <TextView
@@ -10,11 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="@style/header2STyle"
+        android:textColor="@color/white"
         android:text="Product"/>
 
     <TextView
         android:id="@+id/expiration_dialog_txtv_count"
         android:layout_width="wrap_content"
+        android:textColor="@color/matteBlack"
         android:layout_height="wrap_content"
         android:textAppearance="@style/subtitleStyle"
         android:text="15 piece(s)"/>
@@ -24,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/ic_exp"
         style="@style/commonTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -54,7 +59,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:text="Submit"
-            style="@style/commonButton.Variant1"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/purpBlue"
+            style="@style/commonCardView.ButtonV2"
             />
 
         <Button
@@ -62,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
+            android:textColor="@color/white"
             style="@style/commonButton.TextButton"/>
 
     </LinearLayout>

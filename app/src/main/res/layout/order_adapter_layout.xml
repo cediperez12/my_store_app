@@ -23,7 +23,7 @@
             android:id="@+id/order_adapter_txtv_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/subtitleStyle"
+            android:textAppearance="@style/subtitleStyleV2"
             android:text="2 pieces"/>
 
     </LinearLayout>

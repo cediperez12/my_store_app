@@ -4,31 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/ashWhite"
     tools:context=".Activity.ViewOrderActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/ashWhite"
         android:orientation="vertical">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/view_order_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/ashWhite"
             style="@style/Widget.MaterialComponents.Toolbar.Surface"
-            app:titleTextColor="@color/purple_500"
+            app:titleTextAppearance="@style/titleStyle"
+            app:titleTextColor="@color/matteBlack"
             app:title="Order"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:background="@drawable/shadow_image"
             android:orientation="vertical"
+            android:layout_margin="12dp"
             android:padding="16dp">
 
             <TextView
                 android:id="@+id/view_order_txtv_ordernumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:textAppearance="@style/header2STyle"
                 android:text="Order #231"/>
 
@@ -36,6 +44,8 @@
                 android:id="@+id/view_order_txtv_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/ashGray"
+                android:layout_marginLeft="10dp"
                 android:textAppearance="@style/subtitleStyle"
                 android:text="December 12, 1999"/>
 

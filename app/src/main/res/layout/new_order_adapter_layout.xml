@@ -3,20 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="8dp">
+    android:background="@drawable/shadow_image"
+    android:padding="16dp">
 
     <Button
         android:id="@+id/new_order_adapter_disabled_btn"
+        style="@style/commonIconOnlyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:enabled="false"
         android:text=""
-        style="@style/commonIconOnlyButton"
         app:icon="@drawable/ic_shop_item"
         app:iconSize="36dp"
-        android:enabled="false"/>
+        app:iconTint="@color/purpBlue" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -29,34 +31,39 @@
             android:id="@+id/new_order_adapter_txtv_prod_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/header2STyle"
             android:text="Product 1"
-            android:textColor="@color/purple_500"/>
+            android:textAppearance="@style/header2STyle"
+            android:textColor="@color/matteBlack" />
 
         <TextView
             android:id="@+id/new_order_adapter_txtv_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="15 pieces"
             android:textAppearance="@style/subtitleStyle"
-            android:text="15 pieces"/>
+            android:textColor="@color/matteBlack" />
 
         <TextView
             android:id="@+id/new_order_adapter_txtv_cost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="$240.50"
             android:textAppearance="@style/subtitleStyle"
-            android:text="$240.50"/>
+            android:textColor="@color/purpBlue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/new_order_adapter_btn_close"
+        style="@style/commonIconOnlyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:text=""
         app:icon="@drawable/ic_close"
-        style="@style/commonIconOnlyButton"/>
+        app:iconTint="@color/purpBlue" />
 
 </RelativeLayout>

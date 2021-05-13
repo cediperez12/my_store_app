@@ -32,12 +32,12 @@
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable-v24\\app_title_with_subtitle.png"
     },
     {
-        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_app_title_with_subtitle.png.flat",
-        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable\\app_title_with_subtitle.png"
-    },
-    {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_accounting.xml.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\activity_accounting.xml"
+    },
+    {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_app_title_with_subtitle.png.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable\\app_title_with_subtitle.png"
     },
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_round.xml.flat",
@@ -58,6 +58,10 @@
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_new_order_adapter_layout.xml.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\new_order_adapter_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_order_d.xml.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable\\ic_order_d.xml"
     },
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\menu_dashboard_more_menu.xml.flat",
@@ -100,12 +104,12 @@
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\menu\\dashboard_create_menu.xml"
     },
     {
-        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_accounts_adapter_layout.xml.flat",
-        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\accounts_adapter_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_shadow_.png.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable-v24\\shadow_.png"
+    },
+    {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_accounts_adapter_layout.xml.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\accounts_adapter_layout.xml"
     },
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\font_mulish_bold.ttf.flat",
@@ -152,16 +156,20 @@
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\menu\\dashboard_menu.xml"
     },
     {
-        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_restock.xml.flat",
-        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\activity_restock.xml"
-    },
-    {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\font_mulish_semibold.ttf.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\font\\mulish_semibold.ttf"
     },
     {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_restock.xml.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\activity_restock.xml"
+    },
+    {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_exp.xml.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable-v24\\ic_exp.xml"
     },
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -172,12 +180,12 @@
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_account.xml.flat",
-        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable\\ic_account.xml"
-    },
-    {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\color_tf_selected.xml.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\color\\tf_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_account.xml.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\drawable\\ic_account.xml"
     },
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_product_adapter_layout.xml.flat",
@@ -224,12 +232,12 @@
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\font\\inter_regular.ttf"
     },
     {
-        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_expiration_dialog_layout.xml.flat",
-        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\expiration_dialog_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\font_mulish_extra_bold.ttf.flat",
         "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\font\\mulish_extra_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_expiration_dialog_layout.xml.flat",
+        "source": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\src\\main\\res\\layout\\expiration_dialog_layout.xml"
     },
     {
         "merged": "C:\\Users\\ArEy\\AndroidStudioProjects\\my_store_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",

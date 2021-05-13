@@ -13,16 +13,20 @@
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.Toolbar.Surface"
         app:title="Update Product"
-        app:titleTextColor="@color/purple_500"/>
+        android:background="@color/ashWhite"
+        app:titleTextColor="@color/matteBlack"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/ashWhite"
         android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/shape_round"
+            android:padding="12dp"
             android:layout_centerInParent="true"
             android:orientation="vertical">
 
@@ -31,6 +35,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/commonTextInputLayout"
+                app:startIconDrawable="@drawable/ic_prod"
+                android:layout_marginBottom="12dp"
                 android:hint="Product name">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -47,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 style="@style/commonTextInputLayout"
+                app:startIconDrawable="@drawable/ic_money"
                 android:enabled="true"
                 android:hint="Cost each">
 
@@ -61,12 +68,12 @@
                 android:id="@+id/update_product_btn_save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/purple_500"
-                android:textColor="@color/white"
+                android:textColor="@color/purpBlue"
                 android:layout_marginTop="16dp"
                 android:enabled="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                style="@style/commonButton.Variant1"
+                style="@style/commonCardView.ButtonV2"
+                android:backgroundTint="@color/white"
                 android:text="Save Product"
                 app:cornerRadius="8dp" />
 
